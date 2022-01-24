@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Tip calculator app</title>
+</head>
+<body>
+  <main>
+    <!-- main container  -->
+    <div class="container">
+      <!-- logo section  -->
+      <div class="logo">
+        <img src="./images/logo.svg" alt="app logo">
+      </div>
+      <!-- calculator  -->
+      <div class="calculator">
+        <!-- calculator functions  -->
+        <div class="calculator-function">
+          <!-- set a bill  -->
+          <div class="section">
+            <label for="bill" class="d-block label">Bill</label>
+            <input type="number" name="bill" id="bill" placeholder="0" class="d-block input" min="0">
+          </div>
+          <!-- tip section  -->
+          <div class="section">
+            <p class="label">Select Tip %</p>
+            <div class="tip">
+              <input class="tip-btn btn" type="button" value="5%">
+              <input class="tip-btn btn" type="button" value="10%">
+              <input class="tip-btn btn" type="button" value="15%">
+              <input class="tip-btn btn" type="button" value="25%">
+              <input class="tip-btn btn" type="button" value="50%">
+              <input  type="number" name="tip" id="tip" placeholder="Custom" class="tip-custom btn">
+            </div>
+          </div>
+          <!-- set number of people  -->
+          <div class="section">
+            <label for="people" class="d-block label">Number of People</label>
+            <p class="error" id="error">Can't be zero</p>
+            <input type="number" name="people" id="people" value="1" class="d-block input N-people" min="0" placeholder="0">
+          </div>
+        </div>
+        <!-- calculator display  -->
+        <div class="calculator-display">
+
+          <!-- calculator display information section -->
+          <div>
+            <div class="tip-amount display">
+              <div class="titles">
+                <p class="font">Tip Amount</p>
+                <small class="small">/ person</small>
+              </div>
+              <p id="tip-per" class="numbers">$0.00</p>
+            </div>
+            <div class="total display">
+              <div class="titles">
+                <p>Total</p>
+                <small class="small">/ person</small>
+              </div>
+              <p id="total-per" class="numbers">$0.00</p>
+            </div>
+          </div>
+
+          <!-- reset button  -->
+          <div>
+            <input type="button" value="RESET" class="btn reset" id="reset">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.github.com/Tim5583" target="_blank">Thamindu Praveen</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

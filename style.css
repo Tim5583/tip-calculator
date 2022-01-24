@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap");
+
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Light-grayish-cyan2: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --main-font: "Space Mono", monospace;
+  --button-font-size: 1.5rem;
+  --error: rgb(238, 120, 85);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--Light-grayish-cyan);
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn {
+  font-family: var(--main-font);
+  border: none;
+  border-radius: 5px;
+}
+
+:disabled {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  cursor: not-allowed;
+}
+
+.d-block {
+  display: block;
+}
+
+/* Hide arrows form input number  */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  text-align: right;
+}
+
+.logo {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+  color: var(--Dark-grayish-cyan);
+}
+
+.label {
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.calculator {
+  background-color: var(--White);
+  width: 370px;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.calculator-function {
+  padding-bottom: 1rem;
+}
+
+.input {
+  width: 100%;
+  height: 2em;
+  font-size: var(--button-font-size);
+  border: none;
+  padding: 0 1rem 0 2.5rem;
+  background-color: var(--Light-grayish-cyan2);
+  caret-color: var(--Strong-cyan);
+  border-radius: 5px;
+  background-image: url(./images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: center left 10px;
+}
+
+.N-people {
+  background-image: url(./images/icon-person.svg);
+}
+
+.input:focus,
+.tip-custom:focus,
+.input:hover {
+  outline: none;
+  border: 2px solid var(--Strong-cyan);
+}
+
+.tip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.tip-btn:hover,
+.reset:hover {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.tip-btn {
+  font-size: var(--button-font-size);
+  padding: 0.25em 0;
+  cursor: pointer;
+  color: var(--White);
+  background-color: var(--Very-dark-cyan);
+}
+
+.tip-btn-focus {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.tip-custom {
+  width: 100%;
+  font-size: var(--button-font-size);
+  padding: 0 1rem;
+  caret-color: var(--Strong-cyan);
+}
+
+.calculator-display {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 10px;
+  padding: 1.6rem 1rem;
+  color: var(--White);
+  width: 100%;
+}
+
+.display {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.numbers {
+  font-size: 1.8rem;
+  color: var(--Strong-cyan);
+}
+
+.reset {
+  background-color: var(--Strong-cyan);
+  width: 100%;
+  padding: 0.25em;
+  font-size: var(--button-font-size);
+  cursor: pointer;
+  margin: 1rem auto 0;
+  color: var(--Very-dark-cyan);
+}
+
+.small {
+  color: var(--Dark-grayish-cyan2);
+}
+
+.titles {
+  text-align: left;
+}
+
+.error {
+  font-size: 0.7rem;
+  display: inline-block;
+  margin-left: 2.5rem;
+  color: var(--error);
+  opacity: 0;
+}
+
+.error-input,
+.error-input:focus,
+.error-input:hover {
+  border: 2px solid var(--error);
+}
+
+@media (min-width: 1050px) {
+  .calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 1000px;
+  }
+
+  .calculator-function {
+    padding: 1rem;
+  }
+
+  .error {
+    margin-left: 10.5rem;
+  }
+
+  .calculator-display {
+    display: grid;
+    align-content: space-around;
+    padding: 0 2rem;
+  }
+
+  .tip {
+    grid-gap: .5rem;
+  }
+}
