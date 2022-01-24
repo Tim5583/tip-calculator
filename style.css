@@ -228,5 +228,10 @@ body {
 
   .tip {
     grid-gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .titles {
+    font-size: 1.3rem;
   }
 }
