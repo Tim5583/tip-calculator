@@ -79,13 +79,14 @@ numberOfPeopleEl.addEventListener("keyup", (e) => {
     }
 })
 
-// reset function 
+// reset function
 function reset() {
     bill = tip = personTip = personTotal = billEl.value = null;
     tipEl.value = null;
     numberOfPeopleEl.value = people = 1;
     tipPer.textContent = totalPer.textContent = "$0.00";
-    resetBtn.setAttribute("disabled", true);
+    resetBtn.disabled = true;
+    tipBtns.forEach((item) => {item.classList.remove("tip-btn-focus")});
 }
 
 // reset button function 
