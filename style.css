@@ -190,7 +190,7 @@ body {
 }
 
 :disabled {
-  background-color: var(--Light-grayish-cyan);
+  background-color: var(--Dark-grayish-cyan);
   color: var(--Very-dark-cyan);
   cursor: not-allowed;
 }
